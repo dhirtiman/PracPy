@@ -11,9 +11,9 @@ def Circle(Rad):
 
     return pi*Rad*Rad
 
-def Triangle():
-    print('idk how')
-    return 
+def Triangle(base,hite):
+
+    return 0.5*base*hite
 
 
 
@@ -38,7 +38,7 @@ while True:
        print('Area of the Rectangle: ',Area)
 
     elif choice == '2':
-        side = input("Enter Square side: ")
+        side = int(input("Enter Square side: "))
         Area = Square(side)
         print('Area of the Sqaure: ',Area)
     elif choice == '3':
@@ -46,7 +46,12 @@ while True:
         Area = Circle(Rad)
         print('Area of the CIrcle: ',Area)
     elif choice == '4':
-        Triangle()
+        BH_str = input('Enter the base and height of the triangle')
+        BH_list = BH_str.split()
+        BH_list = [int(x) for x in BH_list]
+        Area = Triangle(BH_list[0],BH_list[1])
+        print('Area of the Triangle: ',Area)
+
     elif choice == '5':
         print('saynoyara!')
         break
