@@ -65,5 +65,39 @@ LIMIT 1;
 
 -- iv. Increase the fare by 5% of each route.
 
+UPDATE route
+
+set fare = fare * 1.05;
+
+ -- output after showing
+
+# route_id	source	destination	fare	time
+1	'Silchar'	'Hailakandi'	'42.525'	60
+2	'Silchar'	'Karimganj'	'31.5'	45
+3	'Silchar'	'Lala'	'21'	30
+4	'Silchar'	'Manipur'	'10.5'	15
+5	'Hailakandi'	'Silchar'	'42.525'	60
+6	'Karimganj'	'Silchar'	'31.5'	45
+7	'Lala'	'Silchar'	'21'	30
+8	'Sonai'	'Silchar'	'10.5'	15
+9	'Silchar'	'Udarbond'	'26.25'	30
+10	'Udarbond'	'Silchar'	'26.25'	30
+
+-- v. Stopped the bus facility from Silchar to Manipur.
 
 
+DELETE from route
+WHERE source = 'silchar' AND destination = 'manipur';
+
+ -- output after showing
+
+# route_id	source	destination	fare	time
+1	'Silchar'	'Hailakandi'	'42.525'	60
+2	'Silchar'	'Karimganj'	'31.5'	45
+3	'Silchar'	'Lala'	'21'	30
+5	'Hailakandi'	'Silchar'	'42.525'	60
+6	'Karimganj'	'Silchar'	'31.5'	45
+7	'Lala'	'Silchar'	'21'	30
+8	'Sonai'	'Silchar'	'10.5'	15
+9	'Silchar'	'Udarbond'	'26.25'	30
+10	'Udarbond'	'Silchar'	'26.25'	30
