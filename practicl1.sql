@@ -1,4 +1,16 @@
 
+
+CREATE TABLE Employee(
+    emp_name VARCHAR(30),
+    emp_id int primary key,
+    emp_address VARCHAR(10),
+    DOJ DATE,
+    emp_dept VARCHAR(50),
+    salary FLOAT
+);
+
+
+
 -- i. Insert atleast 10 records of your own choice.
 
 
