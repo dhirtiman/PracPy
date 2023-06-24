@@ -1,5 +1,8 @@
-def spam(text):
-     print (text, 'bich ')
+L = [1, "a" , "string" , 1+2]
+print (L)
+L.append(6)
+print (L)
 
-
-spam('hemlo')
+print(L.pop())
+print (L)
+print (L[0])
